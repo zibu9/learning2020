@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                              
+    <title>infosouris</title>
+</head>
+<body>
+        <script>
+                            // Renvoie le nom du bouton souris à partir de son code
+            function getBoutonSouris(code) {
+                var bouton = "inconnu";
+                switch (code) {
+                case 0: // 0 est le code du bouton gauche
+                    bouton = "gauche";
+                    break;
+                case 1: // 1 est le code du bouton du milieu
+                    bouton = "milieu";
+                    break;
+                case 2: // 2 est le code du bouton droit
+                    bouton = "droit";
+                    break;
+                }
+                return bouton;
+            }
+
+            // Affiche des informations sur un événement souris
+            function infosSouris(e) {
+                alert("Evènement souris : " + e.type + ", bouton " +
+                    getBoutonSouris(e.button) + ", X : " + e.clientX + ", Y : " + e.clientY);
+            }
+
+            // Gestion du clic souris
+            document.addEventListener("click", infosSouris);
+        </script>
+</body>
+</html>

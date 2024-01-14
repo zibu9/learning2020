@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>getElementById example</title>
+</head>
+<body>
+  <p id="para">Some text here</p>
+  <button onclick="changeColor('blue');">blue</button>
+  <button onclick="changeColor('red');">red</button>
+  <button onclick="changeColor('black');">reset</button>
+  <div id="main">
+  </div>
+
+  <script>
+    let elt = document.getElementById('main');
+    elt.style.fontWeight = "bold";
+    elt.style.color = "red";      
+    elt.innerHTML = "<ul><li>Elément 1</li><li>Elément 2</li></ul>";
+        function changeColor(newColor) {
+            var elem = document.getElementById('para');
+            elem.style.color = newColor;
+        }
+  </script>
+</body>
+</html>

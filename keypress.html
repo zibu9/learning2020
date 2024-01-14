@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>keypress</title>
+</head>
+<body>
+    <script>
+        // Gestion de l'appui sur une touche du clavier produisant un caractère
+    document.addEventListener("keypress", function (e) {
+        alert("Vous avez appuyé sur la touche " + String.fromCharCode(e.charCode));
+    });
+    </script>
+</body>
+</html>
